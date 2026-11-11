@@ -12,13 +12,13 @@ private static final int MAX_CAPACITY = 50;
 	public static void addProperty(Property p) {
 		if (propertyCount < MAX_CAPACITY) {
 			if (searchPropertyById(p.getPropertyId())) {
-				java.lang.System.out.println("Property ID already exists. Please enter a different ID.");
+				System.out.println("Property ID already exists. Please enter a different ID.");
 			} else {
 				properties[propertyCount++] = p;
-				java.lang.System.out.println("Property added successfully!");
+				System.out.println("Property added successfully!");
 			}
 		} else {
-			java.lang.System.out.println("Maximum capacity of properties reached.");
+			System.out.println("Maximum capacity of properties reached.");
 		}
 	}
 
@@ -47,13 +47,13 @@ private static final int MAX_CAPACITY = 50;
 		String output = "";
 
 		if (propertyCount == 0) {
-			java.lang.System.out.println("No properties to display.");
+			System.out.println("No properties to display.");
 		} else {
 			for (int i = 0; i < propertyCount; i++) {
 				output += properties[i].toString() + "\n";
 			}
 		}
-		java.lang.System.out.println(output);
+		System.out.println(output);
 	}
 
 	public static double calculateAveragePrice() {
